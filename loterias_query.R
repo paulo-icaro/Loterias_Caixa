@@ -15,8 +15,8 @@ loterias_query = function(lista_concursos, source_github = TRUE){
   # --- Source Auxiliary Functions --- #
   # ---------------------------------- #
   if(source_github == TRUE){
-    #tryCatch(expr = suppressWarnings(source('https://raw.githubusercontent.com/paulo-icaro/Loterias_Caixa/refs/heads/main/loterias_api.R')),
-     #        error = function(e){message('Não foi possível acessar a função loterias_api')})
+    tryCatch(expr = suppressWarnings(source('https://raw.githubusercontent.com/paulo-icaro/Loterias_Caixa/refs/heads/main/loterias_api.R')),
+             error = function(e){message('Não foi possível acessar a função loterias_api')})
     
     Sys.sleep(1)
     
