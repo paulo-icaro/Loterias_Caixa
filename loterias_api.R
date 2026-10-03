@@ -39,13 +39,15 @@ loterias_api = function(url, httr = TRUE){
       
       # --- Fail Case --- #
       if(flag == 3 && is.null(api_connection)){
-        message('Falha ao conectar com a API. A URL pode ter sido especificada incorretamente ou a conexão com a API falhou.')
+        message('Falha ao conectar com a API. Verifique se você especificou a loteria e o concurso corretamente.')
       }
     }
     
     # --- Successfull Case --- #
-    else{message('Conexão bem sucedida !\n')}
-    Sys.sleep(1)
+    else{
+      Sys.sleep(1.5)
+      message('Extração bem sucedida !\n')
+    }
 
     # --- Converting Data to a Readable Format --- #
     api_connection = rawToChar(api_connection$content)             
@@ -79,8 +81,11 @@ loterias_api = function(url, httr = TRUE){
     }
     
     # --- Successfull Case --- #
-    else{message('Conexão bem sucedida !\n')}
-    Sys.sleep(1)
+    else{
+      Sys.sleep(1.5)
+      message('Extração bem sucedida !\n')
+    }
+    
 
     # --- Converting Data to a Readable Format --- #
     api_connection = rawToChar(api_connection$body)             
