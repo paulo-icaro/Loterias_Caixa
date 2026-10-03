@@ -45,9 +45,10 @@ loterias_api = function(url, httr = TRUE){
     
     # --- Successfull Case --- #
     else{
-      Sys.sleep(1.5)
+      Sys.sleep(1)
       message('Extração bem sucedida !\n')
-    }
+      }
+    Sys.sleep(6.5)
 
     # --- Converting Data to a Readable Format --- #
     api_connection = rawToChar(api_connection$content)             
@@ -82,10 +83,10 @@ loterias_api = function(url, httr = TRUE){
     
     # --- Successfull Case --- #
     else{
-      Sys.sleep(1.5)
+      Sys.sleep(1)
       message('Extração bem sucedida !\n')
-    }
-    
+      }
+    Sys.sleep(6.5)
 
     # --- Converting Data to a Readable Format --- #
     api_connection = rawToChar(api_connection$body)             
